@@ -21,6 +21,4 @@
     pip:
       requirements: /tmp/flaskex/requirements.txt
   - name: Start app.py
-    command: python3 /tmp/flaskex/app.py
-    async: 45
-    poll: 0
+    command: nohup python3 /tmp/flaskex/app.py 0<&- &>/dev/null & 
