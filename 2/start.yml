@@ -20,4 +20,4 @@
     pip:
       requirements: /tmp/flaskex/requirements.txt
   - name: Start
-    command: nohup tmp/flaskex/app.py myscript 0<&- &>/dev/null &
+    command: nohup /tmp/flaskex/app.py myscript 0<&- &>/dev/null &
