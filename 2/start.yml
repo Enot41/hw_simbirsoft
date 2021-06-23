@@ -22,3 +22,5 @@
       requirements: /tmp/flaskex/requirements.txt
   - name: Start app.py
     script: /tmp/flaskex/app.py
+    args:
+      executable: python3
