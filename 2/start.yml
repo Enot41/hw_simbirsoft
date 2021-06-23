@@ -21,4 +21,4 @@
     pip:
       requirements: /tmp/flaskex/requirements.txt
   - name: Start app.py
-    script: /tmp/flaskex/app.py
+    command: python3 /tmp/flaskex/app.py
