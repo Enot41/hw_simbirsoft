@@ -4,4 +4,4 @@ RUN apt-get install git python3 python3-pip -y
 RUN git clone https://github.com/anfederico/flaskex.git
 RUN pip3 install -r flaskex/requirements.txt
 EXPOSE 5000
-CMD [ "python", "flaskex/app.py" ]
+CMD [ "python3", "flaskex/app.py" ]
