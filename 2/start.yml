@@ -20,4 +20,4 @@
     pip:
       requirements: /tmp/flaskex/requirements.txt
   - name: Start
-    shell: "start-stop-daemon --start --quiet  --pidfile /tmp/flaskex/app.pid --make-pidfile --exec /usr/bin/python3 /tmp/flaskex/app.py --verbose"
+    shell: "start-stop-daemon --start --quiet  --pidfile /tmp/flaskex/app.pid --make-pidfile --exec /usr/bin/python3 /tmp/flaskex/app.py --background"
