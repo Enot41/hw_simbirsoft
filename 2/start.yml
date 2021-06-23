@@ -21,4 +21,5 @@
     pip:
       requirements: /tmp/flaskex/requirements.txt
   - name: Start app.py
-    shell: python3 /tmp/flaskex/app.py
+    command: python3 /tmp/flaskex/app.py
+    run_once: true
