@@ -20,6 +20,7 @@
     pip:
       requirements: /tmp/flaskex/requirements.txt
   - name: Start app.py
-    script: /tmp/flaskex/app.py
+    ansible.builtin.script: /tmp/flaskex/app.py
+    become: yes
     args:
       executable: python3
