@@ -1,7 +1,7 @@
-FROM ubuntu:18.04
+FROM python:3
 RUN apt-get update
-RUN apt-get install git python3 python3-pip -y
+RUN apt-get install git  -y
 RUN git clone https://github.com/anfederico/flaskex.git
 RUN pip3 install -r flaskex/requirements.txt
 EXPOSE 5000
-RUN python3 flaskex/app.py
+CMD [ "python", ".flaskex/app.py" ]
