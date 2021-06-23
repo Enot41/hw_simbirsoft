@@ -20,4 +20,6 @@
     pip:
       requirements: /tmp/flaskex/requirements.txt
   - name: Start
-    command: nohup python3 /tmp/flaskex/app.py myscript 0<&- &>/dev/null &
+    shell: "start-stop-daemon --start --quiet --pidfile /tmp/flaskex --exec /tmp/flaskex/app.py"
+  args:
+    executable: "/bin/python3"
