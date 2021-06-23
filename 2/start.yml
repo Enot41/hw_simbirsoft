@@ -16,6 +16,7 @@
       repo: https://github.com/anfederico/flaskex.git
       dest: /tmp/flaskex
       clone: yes
+      update: no
   - name: Install pip
     pip:
       requirements: /tmp/flaskex/requirements.txt
