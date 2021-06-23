@@ -1,0 +1,25 @@
+- name: build host
+  hosts: db
+  become: yes
+
+  tasks:
+  - name: Install git python3
+    apt:
+      pkg: 
+      - python3 
+      - git 
+      - python3-pip
+      update_cache: yes
+      state: present
+  - name: Clone Git
+    git:
+      repo: https://github.com/anfederico/flaskex.git
+      dest: /tmp/flaskex
+      clone: yes
+  - name: Install pip
+    pip:
+      requirements: /tmp/flaskex/requirements.txt
+  - name: Start app.py
+    script: /tmp/flaskex/app.py
+    args:
+      executable: python3
